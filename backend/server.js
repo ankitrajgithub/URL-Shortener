@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from "cors";
+import urlRoutes from './routes/url.js'
 import dns from "node:dns/promises";
 dns.setServers(["1.1.1.1"]);
 
@@ -24,10 +25,5 @@ async function main() {
   });
 }
 
-app.get("/",(req,res)=>{
-    
-    res.json({
-        msg:"Home page!!"
-    })
-});
+app.use("/",urlRoutes);
 
