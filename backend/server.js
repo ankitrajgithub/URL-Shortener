@@ -1,12 +1,18 @@
 import express from "express";
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cors from "cors";
 import dns from "node:dns/promises";
 dns.setServers(["1.1.1.1"]);
 
 dotenv.config();
 
 const app=express();
+app.use(express.json());
+app.use(cors({
+    origin:process.env.FRONTEND_URL,
+    methods:["GET",'POST']
+}));
 const PORT=process.env.PORT;
 
 main().catch(err => console.log(err));
@@ -17,7 +23,6 @@ async function main() {
     console.log(`Server is running on Port ${PORT}`)
   });
 }
-
 
 app.get("/",(req,res)=>{
     
