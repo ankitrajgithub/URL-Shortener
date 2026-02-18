@@ -29,7 +29,7 @@ router.post("/shorten",async (req,res)=>{
         });
         res.json({
             shortUrl:url.shortUrl,
-            url:`${process.env.BASE_URL}/${url.shortId}`
+            url:`${process.env.BASE_URL}${url.shortUrl}`
         })
     }catch(err){
         res.status(500).json({
@@ -38,7 +38,7 @@ router.post("/shorten",async (req,res)=>{
     }
 });
 
-router.get(":/shortUrl",async (req,res)=>{
+router.get("/:shortUrl",async (req,res)=>{
     try{
         const {shortUrl}=req.params;
         const url=await Url.findOne({shortUrl});

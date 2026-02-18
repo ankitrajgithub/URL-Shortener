@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from "cors";
-import urlRoutes from './routes/url.js'
+import router from './routes/url.js'
 import dns from "node:dns/promises";
 dns.setServers(["1.1.1.1"]);
 
@@ -25,5 +25,5 @@ async function main() {
   });
 }
 
-app.use("/",urlRoutes);
+app.use("/",router);
 

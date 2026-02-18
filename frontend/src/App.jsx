@@ -1,7 +1,16 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [url,setUrl] = useState("");
+  const [shortUrl,setShortUrl]=useState("");
+  const [copied,setCopied]=useState(false);
+  const [qrImage,setQrImage]=useState("");
+
+  const handleShorten=async ()=>{
+    if(!url){
+      
+    }
+  }
 
   return (
     <>
