@@ -11,6 +11,7 @@ It allows users to shorten long URLs, track clicks, and generate QR codes.
 🌐 REST API backend
 
 🏗 Project Structure:
+
 URL-Shortener/
 │
 ├── frontend/     → React + Tailwind CSS
