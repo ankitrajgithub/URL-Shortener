@@ -78,9 +78,7 @@ Response:
 
 2️⃣ Redirect to Original URL
 GET /:shortUrl
-
 Redirects to original URL
-
 Increments click count
 
 🧠 How It Works:
