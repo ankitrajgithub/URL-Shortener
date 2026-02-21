@@ -57,7 +57,7 @@ function App() {
               <QRCode value={shortUrl} size={180}/>
             </div>
             {qrImage && (
-              <a className='btn btn-accent mt-3 w-full w-full text-center' href={qrImage} download="qr-code.png">Download QR Code</a>
+              <a className='btn btn-accent mt-3 w-full text-center' href={qrImage} download="qr-code.png">Download QR Code</a>
             )}
           </div>
         )}
